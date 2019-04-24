@@ -2,10 +2,10 @@
 
 
 <form method="post" action="processa_matricula.php">
-    <br><br>
-    <p> Selecione o aluno </p>  
-    <select name="escolha_aluno">
-        <br><br>
+    <p></p>
+    <p> <strong> Selecione o aluno </strong> </p>  
+    <select class="form-control" name="escolha_aluno" autofocus>
+        <p></p>
         <option> Selecione um aluno </option>
         <?php
             while($row = mysqli_fetch_array($consulta_alunos)){
@@ -15,9 +15,9 @@
             }
         ?>    
     </select>
-    <br><br>
-    <p> Selecione o curso </p>
-    <select name="escolha_curso">
+    <p></p>
+    <p> <strong> Selecione o curso </strong> </p>
+    <select class="form-control" name="escolha_curso">
         <br><br>
         <option> Selecione um curso </option>    
         <?php
@@ -29,5 +29,5 @@
     </select>
     <br><br>
 
-    <input type="submit" value="Matricular">
+    <input class="btn btn-success" type="submit" value="Matricular Aluno">
 </form>

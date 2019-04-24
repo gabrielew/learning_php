@@ -31,7 +31,15 @@
 
         case 'inserir_matricula':
             include 'views/inserir_matricula.php';
-            break;    
+            break;
+            
+        case 'update_aluno':
+            include 'views/update_aluno.php';
+            break;
+
+        case 'update_curso':
+            include 'views/update_curso.php';
+            break;
 
         default:
             include 'views/home.php';
