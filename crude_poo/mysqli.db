@@ -1,0 +1,8 @@
+create database crudeOO
+
+create table contatos(
+    id_contato int not null auto_increment,
+    nome_contato varchar(100),
+    email_contato varchar(100) not null,
+    primary key(id_contato)
+)
