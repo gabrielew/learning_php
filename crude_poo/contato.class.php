@@ -26,20 +26,18 @@
 
         }
 
-        public function selectNome($email){
+        public function selectById($id_contato){
 
-            $sql = "SELECT nome FROM contatos WHERE email = :email";
-            $sql->bindValue(':email', $email);
-            $sql = $this->prepare($sql);
+            $sql = "SELECT * FROM contatos WHERE id_contato = :id_contato";
+            $sql = $this->pdo->prepare($sql);
+            $sql->bindValue(':id_contato', $id_contato);
             $sql->execute();
 
             if($sql->rowCount() > 0){
-                $info = $sql->fetch();
-
-                return $info['nome'];
+                return $sql->fetch();
             }
             else {
-                return '';
+                return array();
             }
         }
 
@@ -54,22 +52,20 @@
                 return array();
         }
 
-        public function updateAll($id_contato, $email, $nome){
+        public function updateAll($email, $nome, $id_contato){
 
             if($this->existIdContato($id_contato)){
                 $sql = "UPDATE contatos SET nome = :nome, email = :email WHERE id_contato = :id_contato";
                 $sql = $this->pdo->prepare($sql);
-                $sql->bindValue(':id_contato', $id_contato);
                 $sql->bindValue(':email', $email);
-                $sql->bindValue(':nome', $nome);               
+                $sql->bindValue(':nome', $nome);      
+                $sql->bindValue(':id_contato', $id_contato);         
                 $sql->execute();
 
                 return true;
             } else {
                 return false;
-            }
-                
-            
+            }           
         }
 
         public function delete($id_contato){
