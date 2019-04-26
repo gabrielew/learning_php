@@ -1,0 +1,18 @@
+/*$email = 'gabriel@sup.com.br';
+    $contato->insert('sup@sup.com.br', 'gabriel');
+    $contato->insert('teste@sup.com', '');
+    $contato->insert('teste@sup.com', 'Marcos');
+    $contato->insert('teste2@sup.com', 'Marcos');
+
+    $list = $contato->selectAll();
+    print_r($list); 
+
+    $contato->updateEmail('gabriel@sup.com.br', 'gabriel');
+    $contato->updateNome('Gabriel', 'teste@sup.com');
+    $contato->delete('teste@sup.com');
+    $excluir = $contato->delete($email);
+
+    if($excluir == true)
+        echo "Foi excluido";
+    else
+        echo "Não excluido";*/
