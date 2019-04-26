@@ -54,30 +54,14 @@
                 return array();
         }
 
-        public function updateNome($nome, $email){
+        public function updateAll($id_contato, $email, $nome){
 
-            if($this->existEmail($email)){
-                $sql = "UPDATE contatos SET nome = :nome WHERE email = :email";
+            if($this->existIdContato($id_contato)){
+                $sql = "UPDATE contatos SET nome = :nome, email = :email WHERE id_contato = :id_contato";
                 $sql = $this->pdo->prepare($sql);
-                $sql->bindValue(':nome', $nome);
+                $sql->bindValue(':id_contato', $id_contato);
                 $sql->bindValue(':email', $email);
-                $sql->execute();
-
-                return true;
-            } else {
-                return false;
-            }
-                
-            
-        }
-
-        public function updateEmail($email, $nome){
-
-            if($this->existNome($nome)){
-                $sql = "UPDATE contatos SET email = :email WHERE nome = :nome";
-                $sql = $this->pdo->prepare($sql);
-                $sql->bindValue(':email', $email);
-                $sql->bindValue(':nome', $nome);
+                $sql->bindValue(':nome', $nome);               
                 $sql->execute();
 
                 return true;

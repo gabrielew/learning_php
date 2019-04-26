@@ -6,7 +6,7 @@
 ?>  
 
     <h1 style="text-align:center"> Contatos </h1>
-
+    <a href = "adicionar.php"> [ADICIONAR] </a> <p></p>
     <table border ='1' width = "600" >
         <tr>
             <th> ID </th>
@@ -24,8 +24,8 @@
                     <td> <?php echo $item['nome']; ?> </td>
                     <td> <?php echo $item['email']; ?> </td>
                     <td>
-                        <a href = ""> [EDITAR] </a>
-                        <a href = "excluir.php?id=<?php echo $item['id_contato'] ?>"> [EXCLUIR] </a>
+                        <a href = "editar.php?id_contato=<?php echo $item['id_contato']; ?>"> [EDITAR] </a>
+                        <a href = "excluir.php?id_contato=<?php echo $item['id_contato']; ?>"> [EXCLUIR] </a>
                     </td>
                 </tr>
             <?php endforeach; ?>        
