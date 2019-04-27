@@ -1,0 +1,26 @@
+create database blog
+
+create table blog(
+    id_usuario int not null auto_increment,
+    usuario varchar(100) not null,
+    nome varchar(100) not null,
+    email varchar(100) not null,
+    senha varchar(32) not null,
+    primary key(id_usuario),
+    unique key(usuario),
+    unique key(email)
+)
+
+create table posts(
+    id_post int not null auto_increment,
+    titulo varchar(100) not null,
+    corpo varchar(255) not null,
+    primary key(id_post)
+)
+
+insert into posts(titulo, corpo) values 
+('titulo teste','industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.');
+insert into posts(titulo, corpo) values 
+('titulo teste 1','industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.');
+insert into posts(titulo, corpo) values 
+('titulo teste 2','industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.')
