@@ -1,0 +1,25 @@
+create table categories(
+    id int not null auto_increment,
+    lang_item varchar(50) not null,
+    primary key(id)
+
+)
+
+insert into categories (lang_item) values ('CATEGORIA-PHOTO');
+insert into categories (lang_item) values ('CATEGORIA-CLOTHES');
+
+create table language(
+    id int not null auto_increment,
+    lang varchar(10) not null,
+    nome varchar(50) not null,
+    valor varchar(200) not null,
+    primary key(id)
+)
+
+INSERT INTO language(lang, nome, valor) values ('en-us','CATEGORIA-PHOTO', 'Photos');
+
+INSERT INTO language(lang, nome, valor) values ('pt-br','CATEGORIA-PHOTO', 'Fotos');
+
+INSERT INTO language(lang, nome, valor) values ('en-us','CATEGORIA-CLOTHES', 'Clothes');
+
+INSERT INTO language(lang, nome, valor) values ('pt-br','CATEGORIA-CLOTHES', 'Roupas');
