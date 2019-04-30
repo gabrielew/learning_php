@@ -11,18 +11,12 @@
 
         public function insert($nome_usuario, $setor = ''){
 
-            if($this->existSetor($setor) == false){
+            
                 $sql = "INSERT INTO usuarios (nome_usuario, setor) VALUES (:nome_usuario, :setor)";
                 $sql = $this->pdo->prepare($sql);
                 $sql->bindValue(':nome_usuario', $nome_usuario);
                 $sql->bindValue(':setor', $setor);
                 $sql->execute();
-
-                return true;
-            }
-            else {
-                return false;
-            }
 
         }
 

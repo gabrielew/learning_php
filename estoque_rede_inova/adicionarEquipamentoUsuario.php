@@ -13,8 +13,6 @@
 <form method = "POST" action = "adicionarequiUsuario_submit.php"> 
 
     EQUIPAMENTO:<p></p>
-    <!-- <input type = "hidden" name = "id_usuario" />
-    <input type = "hidden" name = "id_equipamento" /> -->
     <select autofocus name = "nome_equipamento">
         <option>  </option>
     <?php
@@ -22,7 +20,8 @@
             $list = $equipamento->selectAll();
             foreach ($list as $item){ ?>
             <option value = "  <?php echo $item['id_equipamento']; ?> "> 
-                <?php echo $item['nome_equipamento']; ?> 
+                <?php echo $item['nome_equipamento'];
+                    $item['id_equipamento']; ?> 
             </option>
 
     <?php }; ?>
@@ -47,7 +46,7 @@
     </select><p></p>
 
     DATA INÍCIO:<p></p>
-    <input type = "date" name = "data_inicio" />
+    <input type = "date" name = "data_inicio" /><p></p>
     <input type = "submit" value = "Adicionar" />
 
 </form>

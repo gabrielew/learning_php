@@ -81,7 +81,7 @@
 
         <?php
             $list = $equipamentoUsuario->selectAll();
-            foreach ($list as $item):
+            foreach ($list as $item) {
         ?>
                 <tr>
                     <td> <?php echo $item['id_equipamento_usuario']; ?> </td>
@@ -91,11 +91,11 @@
                     <td> <?php echo $item['data_inicio']; ?> </td>
                     <td> <?php echo $item['data_fim']; ?> </td>
                     <td>
-                        <a href = "editar.php?id_equipamento_usuario=<?php echo $item['id_equipamento_usuario']; ?>"> [EDITAR] </a>
-                        <a href = "excluir.php?id_equipamento_usuario=<?php echo $item['id_equipamento_usuario']; ?>"> [EXCLUIR] </a>
+                        <a href = "editarEquipUsuario.php?id_equipamento_usuario=<?php echo $item['id_equipamento_usuario']; ?>"> [EDITAR] </a>
+                        <a href = "excluirEquipUsuario.php?id_equipamento_usuario=<?php echo $item['id_equipamento_usuario']; ?>"> [EXCLUIR] </a>
                     </td>
                 </tr>
-        <?php endforeach; ?>        
+        <?php } ?>        
 
     </table>
     <p></p>
