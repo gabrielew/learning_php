@@ -52,8 +52,8 @@
 
             
                 $sql = "SELECT * FROM equipamentos_usuarios as EU
-                    INNER JOIN equipamentos as EQ ON EU.id_equipamento = EQ.id_equipamento 
-                    INNER JOIN usuarios as Us ON EU.id_usuario = Us.id_usuario  WHERE EQ.ocupado = 'SIM'";
+                    INNER JOIN equipamentos as EQ ON EU.id_equipamentos = EQ.id_equipamento 
+                    INNER JOIN usuarios as Us ON EU.id_usuarios = Us.id_usuario  WHERE EQ.ocupado = 'SIM'";
                         
             $sql = $this->pdo->query($sql);
             
