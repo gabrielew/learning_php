@@ -24,7 +24,7 @@
         </tr>
     </thead>
     <tbody>
-    <p><a class = "btn btn-success" href = "#"> ADICIONAR </a></p>
+    <p><a class = "btn btn-success" href = "<?php echo base_url('adcUsuarios.php')?>"> ADICIONAR </a></p>
 
     <?php
 

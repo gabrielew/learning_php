@@ -20,7 +20,7 @@ class EquipamentosUsuarios_model extends CI_Model {
         $this->db->from('equipamentos_usuarios as EU');
         $this->db->join('equipamentos', 'id_equipamento = EU.id_equipamentos');
         $this->db->join('usuarios', 'id_usuario = EU.id_usuarios');
-        $this->db->where('equipamentos.ocupado = "NAO"');
+        $this->db->where('equipamentos.ocupado = "SIM"');
         $this->db->order_by('data_inicio', 'ASC');
         return $this->db->get()->result();
     }
